@@ -42,6 +42,9 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 sudo apt-get update -y
 sudo apt-get install -y software-properties-common curl apt-transport-https ca-certificates
 
+# create directory
+sudo mkdir -p /etc/apt/keyrings/
+
 curl -fsSL https://pkgs.k8s.io/addons:/cri-o:/stable:/$CRIO_VERSION/deb/Release.key |
     gpg --dearmor -o /etc/apt/keyrings/cri-o-apt-keyring.gpg
 
